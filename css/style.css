@@ -1,0 +1,73 @@
+
+/*
+#f2ebe1
+#bed390
+#ede992
+*/
+.pattern {
+    background: #3f3d55;
+}      
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #f2ebe1;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 8px #161523;
+    margin: 0;
+}
+
+
+
+.profile-pic {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;      
+    overflow: hidden; 
+}
+
+
+.profile-pic:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+img {
+    width: 300px;
+    height: 300px;   
+}
+
+
+a {
+    color: #f2ebe1;
+}
+
+a:hover {
+    color: #161523;
+}
+
+
+
+.contact i {
+    color: #f2ebe1;
+    font-size: 50px;
+}
+
+.contact i:hover {
+    color: #161523;
+}
+
+
+
+
+.footer {
+    height: 20px;
+}
