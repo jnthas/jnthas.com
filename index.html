@@ -19,11 +19,10 @@
   <div class="container">
 
     <section class="header">
-      <div class="row">
-
-        <div class="one column offset-by-eleven">
-            <a href="#">EN</a> 
-            <a href="#">PT</a> 
+      <div class="row u-pull-right">
+        <div class="two column">
+            <a id="lang_en" href="#">EN</a> 
+            <a id="lang_pt" href="#">PT</a> 
         </div>
       </div>
     </section>
@@ -36,22 +35,13 @@
 
             <div class="wrapper">
               <h1>JONATHAS A. BARBOSA</h1>
-              <p>Engenheiro de Software em <a href="https://goo.gl/maps/5mFviqbwRpv">Belo Horizonte, MG - Brasil</a></p>
+              <p id="location"></p>
             
               <div class="profile-pic">
-                  <img src="images/jonathas_desenho.png"/>
+                  <img class="u-img-responsive" src="images/jonathas_desenho.png"/>
               </div>
-      
-              <!--
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id quam commodo, pellentesque leo at, laoreet tellus. Suspendisse consequat, magna sed sodales imperdiet, metus justo vestibulum lectus, eget molestie metus nunc sed lacus. Mauris tincidunt arcu in mauris fringilla venenatis. Curabitur ornare dignissim ex eu feugiat. Suspendisse imperdiet sed magna vitae elementum. Proin et rutrum dolor. Sed sed sagittis purus, eget posuere sem. Aenean finibus congue sollicitudin.</p>  
-              -->
 
-              <p>Analista de sistemas e pós-graduado em Engenharia de Software pela PUC Minas. 
-                No mercado de trabalho à mais de oito anos, já trabalhou com diversas tecnologias mobile, desktop e web. 
-           Fotógrafo da vida cotidiana nas horas vagas. 
-                Baterista de mesa, sempre que ouço uma música boa. 
-                Cozinhar é programação, de comida.
-                Say my name. That's what she said. Plata o plomo.</p>
+              <p id="bio"></p>
             </div>
         </div>
 
@@ -62,19 +52,13 @@
     <section class="contact">
       <div class="row">
 
-          <div class="one column offset-by-four">
-              <a href="https://www.linkedin.com/in/jnthas"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <div class="one column">
-              <a href="https://www.instagram.com/jnthas"><i class="fab fa-instagram"></i></a>
-          </div>
-          <div class="one column">
-              <a href="https://www.facebook.com/jnthas"><i class="fab fa-facebook"></i></a>
-          </div>
-          <div class="one column">
-              <a href="http://github.com/jnthas"><i class="fab fa-github"></i></a>
-          </div>
-          
+        <div class="twelve column center-icons">
+          <a target="_blank" href="http://github.com/jnthas"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/jnthas"><i class="fab fa-linkedin-in"></i></a>
+          <a target="_blank" href="https://www.instagram.com/jnthas"><i class="fab fa-instagram"></i></a>
+          <a target="_blank" href="https://www.facebook.com/jnthas"><i class="fab fa-facebook"></i></a>
+        </div>
+        
       </div>
     </section>
     
@@ -83,7 +67,34 @@
   <section class="footer">          
   </section>
 
-  
 
+
+  <script>
+
+    (function() {
+      //pt
+      document.getElementById("lang_pt").addEventListener("click", () => {
+        document.getElementById("location").innerHTML = "Engenheiro de Software em <a href=\"https://goo.gl/maps/5mFviqbwRpv\">Belo Horizonte, MG - Brasil";
+        document.getElementById("bio").innerHTML = "Analista de sistemas e pós-graduado em Engenharia de Software pela PUC Minas. No mercado de trabalho à mais de oito anos, já trabalhou com diversas tecnologias mobile, desktop e web. Fotógrafo da vida cotidiana nas horas vagas. Gosta de batucar na mesa sempre que ouve uma boa música e acredita que cozinhar é como programação, mas de comida. Say my name. That's what she said. Plata o plomo.";
+        document.getElementById("lang_pt").classList.add("selected");
+        document.getElementById("lang_en").classList.remove("selected");
+
+      });
+
+      //en
+      document.getElementById("lang_en").addEventListener("click", () => {
+        document.getElementById("location").innerHTML = "Software Engineer in <a href=\"https://goo.gl/maps/5mFviqbwRpv\">Belo Horizonte, MG - Brazil";
+        document.getElementById("bio").innerHTML = "Computer Systems Analyst and postgraduate in Software Engineering by PUC Minas. In the job market for more than eight years, he has worked with several technologies in mobile, desktop and web. Photographer of the daily life during the time off. He likes to drumming the table whenever he hears good music and believes that cooking is like programming, but with food. Say my name. That's what she said. Plata o plomo.";
+        document.getElementById("lang_pt").classList.remove("selected");
+        document.getElementById("lang_en").classList.add("selected");
+      });
+
+      document.getElementById("lang_en").click();
+
+    })();
+    
+  </script>
+  
+  
 </body>
 </html>

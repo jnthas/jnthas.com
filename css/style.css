@@ -8,6 +8,12 @@
     background: #3f3d55;
 }      
 
+
+.selected {
+    color: #161523;
+    background-color: #f2ebe1;
+}
+
 .wrapper {
     margin: 0;
     padding: 0;
@@ -19,6 +25,7 @@
 
 h1 {
     font-size: 50px;
+    font-weight: 1000;
     text-shadow: 2px 2px 8px #161523;
     margin: 0;
 }
@@ -59,6 +66,7 @@ a:hover {
 .contact i {
     color: #f2ebe1;
     font-size: 50px;
+    margin: 0px 15px 0px 15px;
 }
 
 .contact i:hover {
@@ -66,7 +74,9 @@ a:hover {
 }
 
 
-
+.contact .center-icons {
+    text-align: center;
+}
 
 .footer {
     height: 20px;
